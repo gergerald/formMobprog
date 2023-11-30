@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
 
 void main() {
-  runApp(MyApp());
+  runApp(Apprunner());
 }
 
-class MyApp extends StatelessWidget {
+class Apprunner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(home: FirstPage());
   }
 }
 
-class FirstPage extends StatelessWidget {
+class FirstPageLog extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
