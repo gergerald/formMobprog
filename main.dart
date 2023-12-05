@@ -1,19 +1,5 @@
-import 'package:flutter/material.dart';
-
-const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
-
-void main() {
-  runApp(Apprunner());
-}
-
-class Apprunner extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(home: FirstPage());
-  }
-}
-
 class FirstPageLog extends StatelessWidget {
+  // "Para maka retrieve sa data nga gi input"
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -29,6 +15,7 @@ class FirstPageLog extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.all(20),
           children: [
+            // "sa email nga part"
             TextFormField(
               controller: emailController,
               keyboardType: TextInputType.emailAddress,
@@ -36,6 +23,7 @@ class FirstPageLog extends StatelessWidget {
                 labelText: "Email Address",
               ),
             ),
+            // "password part"
             TextFormField(
               controller: passwordController,
               keyboardType: TextInputType.visiblePassword,
@@ -47,6 +35,7 @@ class FirstPageLog extends StatelessWidget {
             SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
+                // "kung e press controller will proc"
                 String email = emailController.text;
                 String password = passwordController.text;
                 print("Email: $email, Password: $password");
